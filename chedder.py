@@ -66,7 +66,6 @@ def process_input():
 
 
 def main():
-    files = find_valid_files()
     process_input()
 
 
