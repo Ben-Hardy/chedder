@@ -24,12 +24,15 @@ def print_help():
 
 To run Chedder you require the chdman tool as Chedder is a convenience wrapper for it.
 
+
 Options:
+
 \t\033[1mall\033[0m: convert all ISO and CUE files in the current directory and all subdirectories to CHD
 
 \t\033[1mall-isos\033[0m: convert all ISO images in the current directory and all subdirectories to CHD
 
 \t\033[1mall-cues\033[0m: convert all CUE images in the current directory and all subdirectories to CHD
+
 
 Example Usage:
 \t\033[1mchedder all\033[0m''')
@@ -40,10 +43,6 @@ def process_input():
 
     if len(args) >= 2:
         files = find_valid_files()
-        # iso to CHD
-        # convert all ISOs to CHDs if they are not already CHDs
-        # cue to CHD
-
 
         if args[1] in ['help', '--help', '-h', '-help']:
             print_help()
@@ -52,6 +51,7 @@ def process_input():
         elif args[1] == 'all':
             for file in files:
                 convert_to_chd(file)
+        # convert all ISOs to CHDs if they are not already CHDs
         elif args[1] == 'all-isos':
             files = [i for i in files if i.lower().endswith(".iso")]
             for file in files:
