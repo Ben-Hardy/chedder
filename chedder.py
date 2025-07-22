@@ -19,19 +19,19 @@ def convert_to_chd(in_file):
 
 
 def print_help():
-    print("Welcome to Chedder, the tool for batch converting disc image files to the CHD (Compressed Hunks of Data) format.")
-    print("")
-    print("To run Chedder you require the chdman tool as Chedder is a convenience wrapper for it.")
-    print("\n")
-    print("Options:")
-    print("\tall: convert all ISO and CUE files in the current directory and all subdirectories to CHD")
-    print("")
-    print("\tall-isos: convert all ISO images in the current directory and all subdirectories to CHD")
-    print("")
-    print("\tall-cues: convert all CUE images in the current directory and all subdirectories to CHD")
-    print("\n")
-    print("Example Usage:")
-    print("\tchedder all")
+    print('''Welcome to Chedder, the tool for batch converting disc image files to the CHD (Compressed Hunks of Data) format.
+
+To run Chedder you require the chdman tool as Chedder is a convenience wrapper for it.
+
+Options:
+\t\033[1mall\033[0m: convert all ISO and CUE files in the current directory and all subdirectories to CHD
+
+\t\033[1mall-isos\033[0m: convert all ISO images in the current directory and all subdirectories to CHD
+
+\t\033[1mall-cues\033[0m: convert all CUE images in the current directory and all subdirectories to CHD
+
+Example Usage:
+\t\033[1mchedder all\033[0m''')
 
 def process_input():
     args = sys.argv
