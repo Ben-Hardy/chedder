@@ -4,6 +4,7 @@ import os
 import sys
 import subprocess as sp
 
+
 def find_valid_files(path='.'):
     valid_files = []
     for path, directories, files in os.walk(path):
@@ -32,6 +33,7 @@ Options:
 
 Example Usage:
 \t\033[1mchedder all\033[0m''')
+
 
 def process_input():
     args = sys.argv
@@ -66,6 +68,7 @@ def process_input():
 def main():
     files = find_valid_files()
     process_input()
+
 
 if __name__ == "__main__":
     main()
