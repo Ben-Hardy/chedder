@@ -61,6 +61,8 @@ def process_input():
             files = [i for i in files if i.lower().endswith(".cue")]
             for file in files:
                 convert_to_chd(file)
+        else:
+            print_help()
     else:
         print_help()
 
